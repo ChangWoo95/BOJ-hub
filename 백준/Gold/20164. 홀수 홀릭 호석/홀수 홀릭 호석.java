@@ -7,7 +7,7 @@ public class Main {
     static int minValue = Integer.MAX_VALUE;
     static int maxValue = Integer.MIN_VALUE;
 
-    /* 
+    /*
     * 1. 자릿수에 따른 재귀호출을 생각할 수 있는가.
     * 2. 숫자를 잘라낼 때, 2중  for문의 범위를 생각할 수 있는가.
     *  */
@@ -25,7 +25,7 @@ public class Main {
             minValue = Math.min(minValue, oddCount);
             maxValue = Math.max(maxValue, oddCount);
 
-        } else if (result <= 100) {
+        } else if (result < 100) {
             int num = (result / 10) + (result % 10);
             dfs(num, oddCount + getOddCount(num));
             return;
